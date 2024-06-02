@@ -8,7 +8,7 @@ st.set_page_config(page_title="AIPCR: Keyword Search", layout="wide")
 # Load data
 @st.cache_resource
 def load_data():
-    return pd.read_csv("D:/MSAI Lectures and Documents/AIPCR Project/topic_modelling_output_bart_mnli.csv")
+    return pd.read_csv("topic_modelling_output_bart_mnli.csv")
 
 # Function to search courses by keyword
 def search_courses_by_keyword(keyword, df):
