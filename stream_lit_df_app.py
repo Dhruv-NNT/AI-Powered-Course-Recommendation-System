@@ -6,25 +6,25 @@ from transformers import pipeline
 st.set_page_config(page_title="AIPCR: Keyword Search", layout="wide")
 
 # Load data
-@st.cache_resource
+@st.cache_data
 def load_data():
-    return pd.read_csv("topic_modelling_output_bart_mnli.csv")
+    df = pd.read_csv("D:/MSAI Lectures and Documents/AIPCR Project/topic_modelling_output_bart_mnli.csv")
+    unnamed_columns = [col for col in df.columns if col.startswith('Unnamed:')]
+    return df.drop(columns=unnamed_columns, axis=1)
 
 # Function to search courses by keyword
 def search_courses_by_keyword(keyword, df):
     keyword = keyword.lower()
     matching_rows = df[df['keywords'].str.contains(keyword, case=False, na=False)]
-    matching_rows = matching_rows.sort_values(by='relevance', ascending=False)
-    return matching_rows
+    return matching_rows.sort_values(by='relevance', ascending=False)
 
 # Load data
 df = load_data()
-unnamed_columns = [col for col in df.columns if col.startswith('Unnamed:')]
-# Drop the unnamed columns
-df = df.drop(columns=unnamed_columns, axis=1)
 
-# Initialize the zero-shot classification pipeline
-classifier = pipeline("zero-shot-classification",  model="facebook/bart-large-mnli")
+# Initialize the zero-shot classification pipeline lazily
+@st.cache_resource
+def load_classifier():
+    return pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
 # Add maroon ribbon
 st.markdown(
@@ -80,6 +80,8 @@ if search_term:
     else:
         st.write("No direct keyword matches, but you may be interested in:")
         
+        classifier = load_classifier()
+        
         # List to store relevant courses
         relevant_courses = []
             
@@ -92,7 +94,7 @@ if search_term:
             if keywords and isinstance(keywords, str):
                 # Compute similarity score between search term and course description
                 similarity_score = classifier(sequences=[search_term], candidate_labels=[keywords])
-                score = similarity_score[0]['scores'][0]
+                score = similarity_score[0]['scores'][0]  # Access the first item in the list, then access 'scores'
                     
                 # Check if similarity score is above threshold
                 if score > 0.50:
