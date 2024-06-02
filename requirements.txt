@@ -1,3 +1,6 @@
 streamlit
 pandas
 numpy
+transformers==2.5.0
+
+
