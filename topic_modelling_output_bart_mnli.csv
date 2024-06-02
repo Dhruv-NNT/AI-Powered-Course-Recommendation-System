@@ -1,0 +1,447 @@
+,course,course_name,course_description,relevance,difficulty,keywords,top_topic_1,top_topic_2,top_topic_3,top_topic_1_contribution,top_topic_2_contribution,top_topic_3_contribution
+0,MS7110,History of Materials,"""MS7110: History of Materials,"" coordinated by Asst Prof Tan Kwan Wee, is a dynamic course blending historical insights with modern material sciences. It focuses on the evolution of materials from the Stone Age to present-day innovations, emphasizing their impact on technology, art, and construction. The course uniquely integrates a scientific understanding of materials' properties, spanning polymers, metals, ceramics, and composites.
+Key characteristics include:
+Historical Perspective: Tracing materials' development through various ages, contextualized with modern scientific knowledge.
+Comprehensive Content: Covering various material systems and their applications, limitations, and potentials.
+Practical and Theoretical Blend: Through case studies, students apply theoretical knowledge to real-world scenarios.
+Diverse Teaching Methods: Including lectures, videos, tutorials, and peer discussions.
+Assessment is based on two major case studies. Supplementary readings support the coursework. The course, part of the Master's program, is designed to build foundational knowledge in Materials Science and Engineering, emphasizing both historical context and future potentials.
+",4.3,2.9225,"materials history, interdisciplinary, innovation",interdisciplinary, material properties, materials history,0.9873,0.9866,0.9841
+1,MS7120, Inorganic Materials,"MS7120: Inorganic Materials is a distinctive course, led by Dr. Feng Xiaolei, designed to provide a comprehensive understanding of descriptive inorganic chemistry for effective technological material design. 
+Key characteristics include:
+Accessibility and Balance: Tailored for diverse scientific and engineering backgrounds, ensuring a thorough and understandable treatment of inorganic chemistry.
+Practical Focus: Systematically explores reactivity, stability, and properties of inorganic compounds, with direct applications to crucial industrial materials.
+Practical Skill Development: Equips students to critically assess inorganic compounds, predict properties, and design materials with specific characteristics.
+Assessment Rigor: Evaluation through two Continuous Assessments (80% MCQ, 20% Essay) covering modules 1 to 3, ensuring a robust understanding of the subject.
+Engaging Teaching Methods: Utilizes a variety of approaches, including lectures, MCQ assessments, tutorials, and peer discussions, enhancing student engagement and understanding.
+Essential Reading: Incorporates key works by Tilley and Shriver, focusing on crystals, crystal structures, and ceramic materials.
+This course, spanning 39 hours and equivalent to 3 Academic Units, delves into fundamental principles, non-metallic materials (halogens, oxygen group, nitrogen group, carbon, silicon, boron, chalcogenide materials, superhard materials), and metallic materials (alkaline and alkaline earth metals, aluminium, gallium, indium, transition metals, rare earth metals, lanthanide oxide glasses, iron, steel, special steel grades).
+",4.4372,2.9314,"inorganic chemistry, crystals, material design",interdisciplinary, industrial applications, inorganic materials,0.9907,0.9811,0.9766
+2,MS7130,Organic Materials,"MS7130: Organic Materials is an advanced course, led by Assoc Prof Andrew Grimsdale, delving into the world of organic materials with a focus on functional applications.
+Key characteristics include:
+Wide Scope of Coverage: Encompassing bulk commodities, bio-inspired materials, cutting-edge substances like graphene, and organic colorants and semiconductors, highlighting their roles in various applications such as biosensors, LED displays, and organic solar cells.
+Materials Approach: Adopting a processing-structure-property-performance framework to comprehensively address the structural, optical, and electronic aspects of organic materials.
+Practical Learning Objectives: Equipping students to understand, critically analyze, and predict the future directions of organic materials for modern technological applications.
+Assessment Rigor: The evaluation includes 3 tutorials (30%), CA1 and CA2 with MCQs (25% each), and a research paper critique through peer review (20%).
+Engaging Teaching Methods: Incorporating a mix of lectures, tutorials, and peer discussions to enhance student learning and understanding.
+Expert Instruction: Led by Assoc Prof Andrew Grimsdale, a seasoned expert in the field, ensuring students receive quality instruction.
+In-Depth Syllabus: Covering fundamental principles, structural organic materials, electronic and optical properties of organic materials, and analytical techniques.
+Practical Analysis: Including the study of size exclusion chromatography, thermal methods, spectroscopy, microscopy, X-ray diffraction, and electrical characterization techniques.
+This 39-hour course, equivalent to 3 Academic Units, is scheduled for Semester 1, AY2021-22, and does not have any course duplications.
+",4.0578,3.5168,"organic materials, functional applications, structural analysis",functional applications, organic materials, interdisciplinary,0.9955,0.9946,0.9765
+3,MS7140,Properties of Materials,"MS7140: Properties of Materials,"" led by Thirumany Sritharan, is an intensive course focusing on the key properties of materials - mechanical, thermal, optical, magnetic, and electrical. It covers:
+Mechanical Properties: Stress and strain behaviors, hardness, and fracture mechanics.
+Optical Properties: Light-material interactions including refraction and absorption.
+Magnetic Properties: Magnetic moments and phenomena like ferromagnetism.
+Electrical Properties: Electron band structures, conductivity, and piezoelectricity.
+The course aims to provide a solid foundation in material properties, crucial for designing advanced engineering systems. Students will learn to measure and recommend materials for specific applications, and understand the underlying reasons for their properties.
+Assessment: A mix of individual and group tasks including tests, essays, and learning logs.
+Methodology: Lectures, interviews, and peer discussions.
+Syllabus Highlights:
+Mechanical and thermal properties: From elasticity to thermal stress.
+Optical, magnetic, and electrical properties: Understanding photon absorption to superconductivity.
+Key Readings: ""Materials Science and Engineering"" by Callister, and supplementary texts by Hertzberg and Livingston.
+This course is essential for engineers and scientists aiming to apply material properties in real-world scenarios.
+",4.25,3.183,"mechanical behavior, material properties, optical properties, electrical properties",interdisciplinary, material properties, material evaluation,0.9942,0.9665,0.9487
+4,MS7210,Processing of Inorganic Materials,"MS7210: Processing of Inorganic Materials,"" taught by Dr. Long Yi, is a specialized course designed to deepen understanding of material processing techniques. It bridges the gap between materials science, mechanical engineering, chemistry, and economics. The course focuses on automated and computer-controlled equipment in commercial processing, emphasizing the underlying scientific principles.
+Aims and Objectives:
+1. Understand the design and basic concepts of processing routes.
+2. Predict material behavior during processing.
+3. Determine the structure and properties of end products.
+4. Assess the advantages and limitations of each process.
+5. Select the best processing method for specific components or materials.
+Course Syllabus:
+Module 1: Processes for particulate and bulk materials.
+Module 2: Vacuum processes.
+Module 3: Solution processes.
+Assessment: Includes continuous assessment, oral presentations, and review papers, contributing to a total of 100%.
+Methodology: Lectures, multiple-choice questions, tutorials, and problem-based learning.
+Readings:
+Key texts by Ohring, Smith, Mitzi, and Barsoum.
+The course, beginning in AY 2018/19 Semester 2, is aimed at students seeking a comprehensive understanding of inorganic material processing, relevant for various engineering applications.
+",4.2735,3.2958,"material processing, automated equipment, scientific principles",interdisciplinary, inorganic materials, material processing,0.9953,0.993,0.9613
+5,MS7220,Processing and Processability of Organic Materials (Polymers),"MS7220: Processing and Processability of Organic Materials (Polymers),"" coordinated by Prof Hu Xiao and Prof Gad Marom, is an advanced course focusing on the processing techniques of thermoplastic and thermosetting polymeric products. It links intrinsic polymer properties to product performance, emphasizing the effects of fillers and stabilizers.
+Aims and Objectives:
+1. Link material properties of polymers to manufacturing techniques.
+2. Design and assess product properties based on mechanical and physical performance.
+3. Understand how processing parameters shape product structures and properties.
+4. Delve into the fundamental aspects of polymer properties like phase transitions and viscoelasticity.
+5. Explore industrial polymer processing technologies and emerging materials such as nanocomposites and biomimetics.
+Assessment: Involves continuous assessments, essays/presentations, and course participation.
+Course Syllabus:
+Module 1: Introduction to polymers and processability.
+Module 2: Processability-dependent properties.
+Module 3: Mechanical properties of polymers.
+Module 4: Emerging materials and technologies like 3D printing and electrospinning.
+Module 5: Guided student-driven teaching and learning.
+Module 6: Course closure with reviews and feedback.
+Methodology: Includes lectures, Q&A, problem-based self-learning, site visits, and discussions.
+Readings:
+Principal texts by D.W. van Krevelen, L.H. Sperling, R.J. Young, and P.A. Lovell.
+Starting in AY 2019-20, Semester 1, the course is designed for students aiming to integrate polymer science with modern manufacturing processes for diverse applications.
+
+",4.4668,3.05,"Polymer processing, product performance, material properties, industrial applications",polymeric materials, organic materials, material properties,0.9861,0.983,0.9498
+6,MS7240,Modelling of Materials,"MS7240: Modelling of Materials,"" overseen by AP Zhao Yang, is a focused course designed to provide an introduction to materials modeling. It's particularly relevant for understanding material properties in scenarios where experiments are not feasible or expensive.
+Aims and Objectives:
+1. Introduce key computational modelling techniques like continuum methods, atomistic and molecular simulations, and quantum mechanics.
+2. Offer insights into fundamental, theoretical, and numerical concepts in materials modeling.
+3. Equip students to:
+Understand different computational modeling techniques.
+Differentiate between Finite Element Method, Molecular Dynamics simulations, and ab-Initio quantum mechanical modeling.
+Recognize the role of computational modeling in unveiling the physics behind experimental studies.
+Course Syllabus:
+Detailed coverage of various computational modeling techniques and their applications in understanding material properties.
+Assessment: Includes structured questions, case studies, and continuous assessment (CA), with a total weight of 100%.
+Methodology: The course combines lectures, regular tests, and simulations to deliver content effectively.
+Readings: A list of supplementary readings and papers will be provided, complementing the lecture content.
+Scheduled to start in AY 2018/19 Semester 1, this course is essential for students interested in the theoretical aspects of materials science, particularly in computational modeling techniques.
+",3.2443,3.9168,"material modeling, material properties, theoretical concepts, quantum mechanics",material modeling, material properties, theoretical concepts,0.9795,0.9756,0.9221
+7,MS7310,Chemical Analysis of Materials,"MS7310: Chemical Analysis of Materials, a 2AU course, offers an in-depth exploration of spectroscopic techniques for chemical analysis. The course emphasizes both surface and bulk analysis of materials.
+Aims and Objectives:
+Cover fundamental principles, instrumentation, and applications of spectroscopic chemical analysis techniques.
+By the course end, students will:
+Understand the working principles of IR, UV-VIS, XRF, and XPS.
+Analyze data from these spectroscopic techniques.
+Recommend suitable techniques for material evaluation with justifications.
+Integrate information from multiple datasets to deduce material properties.
+Course Syllabus:
+1. Introduction to Spectroscopy: Overview and uses in chemical analysis.
+2. Infrared Spectroscopy: Molecular vibrations, wavenumber concepts, and applications.
+3. Ultraviolet-Visible Spectroscopy: Absorption spectra, Beer-Lambert’s law, and applications.
+4. X-ray Fluorescence Spectroscopy: Theoretical principles, instrumentation, and applications.
+5. X-ray Photoelectron Spectroscopy: Background principles, data analysis, and applications.
+Assessment:
+Tutorials: 40% (Individual).
+Continuous Assessment (MCQs and short essays): 30% (Individual).
+Research paper critique (peer review): 30% (Individual).
+Total: 100%.
+Teaching Method: The course utilizes lectures, tutorials, and assessments to deliver content.
+Course Offering: Scheduled for AY 2020/21 Semester 1, conducted by Dr. Fong Wen Mei Eileen, designed for a class size of 30.
+This course is crucial for students seeking to understand and apply spectroscopic techniques in material analysis, integrating theoretical knowledge with practical skills.
+",3.9046,3.6595,"chemical analysis, spectroscopy, material evaluation, data integration",chemical analysis, Spectroscopic techniques, interdisciplinary,0.9908,0.988,0.9833
+8,MS7320, Physical Analysis of Materials,"MS7320: Physical Analysis of Materials, coordinated by AP Oh Joo Tien, is a 2AU course dedicated to the physical characterization of materials, emphasizing thermal analysis and surface analysis techniques.
+Aims and Objectives:
+Introduce advanced characterization techniques for analyzing thermal and surface properties of materials.
+Enable students to select and evaluate physical characterization techniques for material performance investigation.
+Guide students in developing laboratory facilities for thermal and surface analysis.
+Course Syllabus:
+Module 1: Thermal Analysis of Materials: Covers thermal analysis principles, thermogravimetry, differential thermal analysis (DTA), differential scanning calorimetry (DSC), and applications.
+Module 2: Surface Analysis of Materials: Focuses on X-ray Photoelectron Spectroscopy (XPS), Auger Electron Spectroscopy (AES), and other surface analysis techniques.
+Assessment:
+CA1 and CA2: MCQs (30% each).
+CA3: Project (40%).
+Total: 100%.
+Teaching Method: The course utilizes lectures, expert interviews, tutorials, and peer discussions to enhance learning.
+Readings:
+Primary: ""Thermal Methods"" by James W. Dodd, Kenneth H. Tonge, and ""Introduction to Surface Analysis by Electron Spectroscopy"" by John F. Watts.
+Supplementary: Works by Peter J Haines and John Watts, John Wolstenholme.
+Scheduled for AY 2018/19 Semester 1, this course is designed for students interested in the advanced physical characterization of materials, combining theoretical knowledge with practical laboratory skills.
+MS7320: Physical Analysis of Materials, coordinated by AP Oh Joo Tien, is a 2AU course dedicated to the physical characterization of materials, emphasizing thermal analysis and surface analysis techniques.
+Aims and Objectives:
+Introduce advanced characterization techniques for analyzing thermal and surface properties of materials.
+Enable students to select and evaluate physical characterization techniques for material performance investigation.
+Guide students in developing laboratory facilities for thermal and surface analysis.
+Course Syllabus:
+Module 1: Thermal Analysis of Materials: Covers thermal analysis principles, thermogravimetry, differential thermal analysis (DTA), differential scanning calorimetry (DSC), and applications.
+Module 2: Surface Analysis of Materials: Focuses on X-ray Photoelectron Spectroscopy (XPS), Auger Electron Spectroscopy (AES), and other surface analysis techniques.
+Assessment:
+CA1 and CA2: MCQs (30% each).
+CA3: Project (40%).
+Total: 100%.
+Teaching Method: The course utilizes lectures, expert interviews, tutorials, and peer discussions to enhance learning.
+Readings:
+Primary: ""Thermal Methods"" by James W. Dodd, Kenneth H. Tonge, and ""Introduction to Surface Analysis by Electron Spectroscopy"" by John F. Watts.
+Supplementary: Works by Peter J Haines and John Watts, John Wolstenholme.
+Scheduled for AY 2018/19 Semester 1, this course is designed for students interested in the advanced physical characterization of materials, combining theoretical knowledge with practical laboratory skills.
+MS7320: Physical Analysis of Materials, coordinated by AP Oh Joo Tien, is a 2AU course dedicated to the physical characterization of materials, emphasizing thermal analysis and surface analysis techniques.
+Aims and Objectives:
+Introduce advanced characterization techniques for analyzing thermal and surface properties of materials.
+Enable students to select and evaluate physical characterization techniques for material performance investigation.
+Guide students in developing laboratory facilities for thermal and surface analysis.
+Course Syllabus:
+Module 1: Thermal Analysis of Materials: Covers thermal analysis principles, thermogravimetry, differential thermal analysis (DTA), differential scanning calorimetry (DSC), and applications.
+Module 2: Surface Analysis of Materials: Focuses on X-ray Photoelectron Spectroscopy (XPS), Auger Electron Spectroscopy (AES), and other surface analysis techniques.
+Assessment:
+CA1 and CA2: MCQs (30% each).
+CA3: Project (40%).
+Total: 100%.
+Teaching Method: The course utilizes lectures, expert interviews, tutorials, and peer discussions to enhance learning.
+Readings:
+Primary: ""Thermal Methods"" by James W. Dodd, Kenneth H. Tonge, and ""Introduction to Surface Analysis by Electron Spectroscopy"" by John F. Watts.
+Supplementary: Works by Peter J Haines and John Watts, John Wolstenholme.
+Scheduled for AY 2018/19 Semester 1, this course is designed for students interested in the advanced physical characterization of materials, combining theoretical knowledge with practical laboratory skills.
+",4.3239,2.9864,"surface analysis, thermal analysis, material performance, Spectroscopic techniques",polymeric materials, electrical properties, interdisciplinary,0.6613,0.6521,0.6514
+9,MS7330,Electron Microscopy of Materials,"MS7330: Electron Microscopy of Materials, taught by Assoc. Prof. Dong Zhili and Dr. Chris Boothroyd, is a course designed to provide an in-depth understanding of advanced electron microscopy techniques. This course is especially relevant in light of recent developments in electron microscopy and the availability of state-of-the-art equipment in Singapore universities.
+Aims and Objectives:
+Equip students with a deep understanding of analytical electron microscopy tools.
+Prepare students for PhD studies requiring nanomaterials characterization using electron microscopy.
+Enable students to understand the complementary roles of various electron microscopy techniques in solving industrial problems.
+Course Syllabus:
+Module 1: Covers the fundamentals of electron microscopy, including its history, instrumentation, contrast formation, and electron diffraction in TEM (Transmission Electron Microscopy).
+Module 2: Focuses on advanced characterization methods like TEM-EDX (Energy-dispersive X-ray spectroscopy), TEM-EELS (Electron Energy Loss Spectroscopy), HRTEM (High-Resolution Transmission Electron Microscopy), Scanning Electron Microscopy, and HR-STEM (High-Resolution Scanning Transmission Electron Microscopy), along with acquisition and analysis software and image simulations.
+Assessment:
+Assignments and exams for both modules, with a mix of individual assignments, exams, and online MCQs, totaling 100%.
+Class Details:
+Contact Hours/Academic Units: 52 hours / 4 AUs.
+Scheduled for Semester 1, AY 2020-21.
+Class size limited to 20 students.
+The course is crucial for students who wish to specialize in materials characterization, particularly through the use of electron microscopy, blending theoretical knowledge with practical applications.
+
+",3.8715,3.7428,"electron microscopy, nanomaterial characterization, analytical tools",nanomaterial characterization, interdisciplinary, electron microscopy,0.9811,0.9717,0.9686
+10,MS7340,Crystal Chemistry of Materials,"MS7340: Crystal Chemistry of Materials, led by Tim White and Christian Kloc, is a comprehensive course designed to provide a deep understanding of crystal chemistry. It's tailored for students aiming to grasp crystals' structures, properties, and applications without becoming crystallographers.
+Aims and Objectives:
+Equip students with the knowledge to link crystal chemistry with material performance and functionality.
+Enable students to:
+Utilize crystal structure databases and interpret Crystallographic Information Files (CIFs).
+Understand atomic and ionic radii variations for material design.
+Identify characteristics of simple crystal structure families.
+Predict crystal structure changes due to temperature, pressure, and chemistry.
+Recognize nonstoichiometric adaptations in crystal structures.
+Analyze nonstoichiometric functional materials in scientific literature and seminars.
+Course Syllabus:
+Module 1: Foundations of crystal chemistry, including space symmetry, atomic and ionic radii, and CIFs.
+Module 2: Application of crystal chemistry, focusing on structural modifications and responses to external and internal perturbations.
+Module 3: Practical aspects, including interpretation of nonstoichiometric functional materials and research seminars.
+Module 4: Appreciation of crystal chemistry, exploring 3D visualization of structures, database usage, and construction of physical models.
+Assessment:
+A mix of continuous assessments, essays, and practical classes, with individual evaluations covering foundational understanding, application of software, and critique of research seminars.
+Details:
+Contact Hours/Academic Units: 52 hours / 4 AUs.
+Proposed Date of Offer: Semester 1, AY 2021-22.
+Class Size: 25-50 students.
+This course is essential for students interested in understanding and applying the principles of crystal chemistry to tailor functional materials, combining theoretical knowledge with practical skills.
+",4.5768,3.6054,"crystal chemistry, crystallographic information, structural analysis, nonstoichiometric adaptations",interdisciplinary, nonstoichiometric adaptations, material design,0.9849,0.9719,0.9718
+11,MS7410,Nanomaterials,"MS7410: Nanomaterials, led by Prof Jason Xu and AP Xue Can, is a comprehensive course focusing on the basic concepts, advanced knowledge, preparation, characterization, physical properties, and applications of nanomaterials. This course is especially crucial in understanding how nanomaterials differ from their bulk counterparts and their significant impact on industry and human life.
+Aims and Objectives:
+Understand the distinction of nanomaterials from their bulk counterparts in structure, properties, and applications.
+By the end of the course, students will:
+Understand how size affects material properties.
+Recommend preparation methods for different nanomaterials.
+Propose nanomaterial solutions for specific problems.
+Course Syllabus:
+Module 1: Size Effect: Examines quantum and surface effects, quantum confinement, and surface properties of nanomaterials.
+Module 2: Synthesis of Nanomaterials: Covers various synthesis methods including PVD, nanolithography, CVD, colloidal nanoparticles, and more.
+Module 3: Nanoparticle Stability: Discusses the importance of stabilization in colloids, charge stabilization, and steric stabilization.
+Module 4: Optical Properties of Nanomaterials: Explores SPR in metal nanostructures, fluorescence emission of quantum dots, and heterojunctions.
+Module 5: Magnetic Nanomaterials: Focuses on the size dependence of magnetic properties, synthesis methods, and applications.
+Module 6: Catalytic Applications: Investigates nanomaterials in exhaust gas treatment, fuel cell catalysis, and the size effect on catalysts.
+Module 7: Safety Issues of Nanomaterials: Addresses the safety concerns, toxicity, and impact of nanomaterials.
+Assessment:
+A mix of continuous assessments including MCQs, short essays, and projects, totaling 100%.
+Course Details:
+Contact Hours/Academic Units: 39 hours / 3 AUs.
+Scheduled for AY 2018/19 Semester 1.
+Maximum Class Size: 30 students.
+This course is vital for students interested in nanoscience and nanotechnology, providing a detailed understanding of nanomaterials and their applications, balancing theoretical knowledge with practical insights.
+  
+
+
+",4.4667,2.9938,"nanomaterials, size effect, catalytic applications, synthesis technique",catalytic applications, optical properties, material properties,0.9973,0.9923,0.9875
+12,MS7420,Biomaterials,"MS7420: Biomaterials, coordinated by Luciana Lisa Lao for the academic year 2022/23, is a 2AU course designed to introduce students to the interdisciplinary field of biomaterials, particularly their application in healthcare. It focuses on the host response to biomaterials, complications, and key applications of metallic and ceramic biomaterials in hard tissue replacements/supports.
+Course Aims:
+Provide an understanding of biomaterials' role in healthcare.
+Examine host responses to biomaterials and associated complications.
+Introduce in vitro and in vivo compatibility tests.
+Explore applications of metallic and ceramic biomaterials.
+Objective:
+Define key terms and concepts in biomaterials science.
+Illustrate ethical issues in medical device development and use.
+Summarize guidelines to minimize harm and protect rights in testing.
+Describe host response processes to implants and biomaterials.
+Explain complications from undesired host responses.
+Apply ISO 10993 test matrix for biomaterial biocompatibility evaluation.
+Explain basic structure and properties of metallic and ceramic materials.
+Describe specific applications of these biomaterials in the body.
+Discuss metallic and ceramic materials' degradation processes.
+Course Content:
+Introduction to biomaterials, including ethical issues and evolution.
+Tissue-material interactions, including immune response and biocompatibility.
+Properties, applications, and degradation of metallic and ceramic biomaterials.
+Assessment:
+Continuous Assessment 1 (CA1): 50% (ILOs 1-6) - Individual.
+Continuous Assessment 2 (CA2): 50% (ILOs 7-9) - Individual.
+Total: 100%.
+Teaching Approach:
+Blended learning with multimedia resources.
+Emphasis on real-world applications.
+Weekly consultation for enhanced understanding and critical thinking.
+Reading and References:
+Key texts include ""Biomaterials Science – An Introduction to Materials in Medicine"" by Buddy Ratner et al., and ""Biomaterials – A Basic Introduction"" by Qizhi Chen and George Thouas.
+Scheduled to be offered in Semester 1 of AY 2022/23, this course aims to equip students with a comprehensive understanding of biomaterials, their interactions with biological systems, and their applications in healthcare.
+
+ ",4.4043,3.2524,"biocompatibility, biomaterials, healthcare applications, ethical considerations, metallic and ceramic materials",interdisciplinary, healthcare applications, healthcare,0.9898,0.9429,0.9252
+13,MS7430,Electronic Materials,"MS7430: Electronic Materials, instructed by Jason Xu Zhichuan, is a specialized course set for the academic year 2018/19, Semester 2, focusing on electronic materials and their integral role in high-value, cutting-edge devices such as microprocessors, memory devices, displays, and energy systems. This course is significant given the electronic industry's substantial contribution to Singapore's GDP and the employment of many graduates in this sector.
+Course Aims and Objectives:
+Equip students with an understanding of electronic materials' basic properties, their applications in devices, and processing/operation of these devices.
+By the end of the course, students will:
+Understand and explain electronic materials' properties and their roles in technology.
+Comprehend fundamental principles of various electronic devices.
+Describe the processing of electronic devices and their system integration.
+Analyse and predict future trends in electronic materials and device design.
+Course Syllabus:
+Module 1: Basic principles of electronic materials and devices, including energy band theory and interfaces (metal-metal, metal-semiconductor, semiconductor-semiconductor).
+Module 2: Materials and devices for micro/nanoelectronic applications, including MOS capacitors, MOSFETs, microelectronic packaging, and other relevant devices.
+Module 3: Materials and devices for energy harvesting and storage, covering solar cells, thermoelectric materials, energy storage, and other energy technologies.
+Assessment:
+Continuous Assessments (MCQs): 60%.
+Essay: 40%.
+Total: 100%.
+Teaching Method:
+Lectures, tutorials, peer discussions, assessments, and projects.
+Reading List:
+S.O. Kasap's ""Principles of Electronic Materials and Devices"" (3rd ed).
+S.M. Sze's ""Semiconductor Devices - Physics and Technology"".
+B.G. Streetman and S.K. Banerjee's ""Solid State Electronic Devices"" (7th ed).
+J. Nelson's ""The Physics of Solar Cells"".
+This course is designed for a maximum of 30 students and includes 39 contact hours (3 AUs). It is critical for students aiming to delve into the field of electronic materials, providing a comprehensive understanding of their properties, applications, and the future direction of electronic devices.
+",4.3667,3.5333,"electronic devices, material properties, nanoelectronics, technological applications",electronic materials, electronic devices, technological applications,0.98,0.972,0.966
+14,MS7440,Environmental and Thermal Degradation of Polymeric Materials,"MS7440: Environmental and Thermal Degradation of Polymeric Materials, instructed by A/P Aravind Dasari, is a 2 AU course scheduled for Semester 1, AY 2022-23. It's designed for students in Materials Science and Polymer Engineering, but also offers valuable insights for other science and engineering disciplines.
+Course Aims and Objectives:
+Emphasize the impact of environmental and thermal stability on the durability and service-life of polymers.
+Describe the mechanisms and kinetics of environmental degradation in polymers.
+Discuss protection methodologies against environmental degradation.
+Elaborate on the thermophysical properties of polymers and their importance during service-life.
+Introduce fundamentals of polymer combustion and flame retardancy, using major incidents as case studies.
+Course Syllabus:
+Introduction: Applications demanding environmental durability and thermal stability of polymers.
+Environmental Degradation in Polymers: Hydrolysis, oxidative and photolytic degradation, environmental stress cracking, bacterial and fungal degradation, pro-degradation, and kinetics of degradation.
+Macroscopic Consequences: Effects of environmental degradation.
+Protection Against Environmental Degradation: Methods and standards governing durability.
+Thermophysical Properties: Thermal expansion, conductivity, diffusivity, heat capacity, degradation, and thermo-oxidative stability.
+Polymer Combustion: Basics of flame retardancy and case studies.
+Assessment:
+Final Examination: 40% (Individual).
+Participation: 10% (Individual).
+Assignments/CA: 20% (Individual).
+Case Study Presentation: 30% (Group).
+Total: 100%.
+Course Details:
+Contact Hours/Academic Units: 26 hours / 2 AUs.
+Proposed Class Size: No restrictions.
+This course is crucial for understanding the environmental and thermal challenges faced by polymeric materials, highlighting their importance in various applications and the need for effective degradation prevention strategies.
+",3.95,3.4,"thermal properties, durability, polymer degradation, environmental stability",interdisciplinary, polymeric materials, polymers,0.9955,0.9909,0.982
+15,MS7450,Advanced Topics in Biomaterials,"MS7450: Advanced Topics in Biomaterials, instructed by Luciana Lisa Lao for the academic year 2022/23, is a 2 AU course offered in Semester 1, designed as a continuation of the MS7420 Biomaterials course. It is intended for students who have either completed or are concurrently enrolled in MS7420.
+Course Aims:
+This advanced course explores various classes of polymers, including inert, biodegradable, responsive polymers, hydrogels, and natural polymers, and their applications in soft tissue replacements or supports.
+It covers tissue engineering concepts and approaches for regenerating new tissues/organs, and discusses various mechanisms of drug delivery.
+Intended Learning Outcomes (ILO):
+Define polymers and explain their basic structure and properties.
+Describe hydrogels and their medical applications.
+Summarize the requirements of polymeric biomaterials and potential deterioration.
+Explain the properties of selected polymeric biomaterials and their medical applications.
+Discuss biodegradable polymers, degradation mechanisms, and their medical uses.
+Describe natural polymers, their classification, and advantages/disadvantages as biomaterials.
+Define tissue engineering and describe its principles and components.
+Compare and contrast cell sources in tissue engineering.
+Explain the role of materials in tissue engineering as scaffolds.
+Define drug delivery and illustrate various types.
+Explain principles and applications of different drug release systems.
+Course Content:
+Polymers in Medicine.
+Tissue Engineering.
+Drug Delivery.
+Assessment:
+Continuous Assessment 1 (CA1): 35% (Individual, covering ILOs 1-6).
+Continuous Assessment 2 (CA2): 35% (Individual, covering ILOs 7-11).
+Group Project (Essay): 30%.
+Total: 100%.
+Teaching Approach:
+Blended learning with multimedia resources.
+Real-world applications.
+Weekly consultation.
+Reading and References:
+Key texts include ""Biomaterials Science – An Introduction to Materials in Medicine"" by Buddy Ratner et al., and ""Principles of Tissue Engineering"" by R.P. Lanza et al.
+This course, aimed at a suggested class size of 40 students, will significantly benefit those interested in deepening their understanding of advanced biomaterials, tissue engineering, and drug delivery systems.
+
+",4.2,3.05,"biomaterials, drug delivery, polymeric materials, tissue engineering, degradation mechanisms",tissue engineering, polymers, polymeric materials,0.9878,0.957,0.9403
+16,MS7460, Polymer Recycling and Sustainable Polymeric Materials,"MS7460: Polymer Recycling and Sustainable Polymeric Materials, coordinated by Dr. Alex van Herk for the academic year 2022/2023, Semester 2, is a 2 AU course offered by the School of Materials Science and Engineering at NTU. This course is open to students in the Doctor of Philosophy, Master of Engineering, and Master of Science programs in Materials Science and Engineering.
+Course Aims:
+Achieve full awareness of the sustainability aspects of materials, focusing on existing materials' recycling methods and redesigning materials for increased sustainability.
+Provide essential knowledge for professionals in materials science, focusing on sustainability in research or industry applications.
+Intended Learning Outcomes (ILO):
+By the end of the course, students should be able to:
+Explain polymerization mechanisms of materials.
+Classify materials based on properties and polymerization mechanisms.
+Identify environmental issues with polymer waste.
+Understand aspects of polymer waste collection and sorting.
+Explain industrial applications of polymer recycling routes.
+Discuss life cycle analysis of polymers.
+Describe sustainable manufacturing aspects of materials.
+Apply concepts of reformulating materials for sustainability.
+Redesign materials at the molecular level for sustainability.
+Explain biobased building blocks and replacements of materials.
+Critically read and interpret scientific literature in sustainable polymeric materials.
+Write essays on specific areas of interest related to sustainable polymeric materials.
+Course Content:
+Polymer classification, key properties, polymerization techniques.
+Environmental issues, recycling methods, and life cycle analysis.
+Sustainable manufacturing, reformulation, and redesign of polymers.
+Biobased materials and scientific literature discussion.
+Assessment:
+Continuous Assessment 1 (CA1): 60% (Quizzes).
+Continuous Assessment 2 (CA2): 20% (Class Participation).
+Continuous Assessment 3 (CA3): 20% (Essay).
+Total: 100%.
+Teaching Approach:
+Blend of pre-recorded lectures and live video sessions.
+Encourages active learning, critical thinking, and application of course principles.
+Basic Reading and References:
+Introductory texts on polymer chemistry.
+Chemical & Engineering News October 2019, p28; Plastic makers throw chemistry at their waste
+problem, A.H. Tullo
+Nature 2021 Vol 590, p423, Closed-loop recycling of polyethylene-like materials, S. Mecking et al.
+Environ. Sci. Technol. 2010, 44, 8264-8269. Sustainability Metrics: Life Cycle Assessment and
+Green Design in Polymers, M.D. Tabone et al.
+Resources, Conservation and Recycling Vol 145, 2019, p 67-77, LCA of plastic waste recovery
+into recycled materials, energy and fuels in Singapore, Hsien H. Khoo
+Straights Times Nov 2, 2019 Biodegradable disposables can harm environment too
+",4.35,3.0,"polymer recycling sustainable materials, biobased polymers, material redesign",polymer recycling sustainable materials, polymerization mechanisms, polymeric materials,0.9778,0.9744,0.9655
+17,MS7470,Nanostructured Materials for Healthcare,"MS7470: Nanostructured Materials for Healthcare, led by Dr. Luciana Lisa Lao, is a 2 AU course for Semester 1, AY 2023-2024, aimed at postgraduate students in the School of Materials Science and Engineering, including Doctor of Philosophy, Master of Engineering, and Master of Science programs. This course, which does not require approval from MSE for the mentioned students, is designed to introduce the interdisciplinary field of nanostructured materials with a focus on healthcare applications.
+Course Aims and Objectives:
+Explore the self-assembly processes of nanostructures such as micelles, liposomes, and Langmuir-Blodgett films.
+Examine the applications of these materials in healthcare, including nanotherapeutics and cancer therapy, as well as in cosmetics, like nanocarriers for active ingredients.
+Course Syllabus:
+Detailed study of self-assembly in nanostructures, covering micelles, bilayers, liposomes, and more.
+Analysis of nanostructured materials' roles in cosmetics and healthcare, highlighting their use in sunscreen, nanocarriers, nanotherapeutics, and antimicrobial applications.
+Assessment:
+Continuous Assessment 1 (40%): Group Presentation/Report covering ILOs 1-11.
+Continuous Assessment 2 (60%): Class Test covering ILOs 1-11, with a focus on individual understanding.
+Learning and Teaching Approach:
+Blended learning that combines in-video tutorials with immediate feedback to enhance understanding.
+Real-world applications to contextualize theoretical knowledge, supported by weekly consultation hours for deeper engagement and critical thinking.
+Reading and References:
+Key texts include ""Self-Assembly and Nanotechnology: A Force Balance Approach"" by Yoon S. Lee, and ""Nanostructures and Nanomaterials – Synthesis, Properties and Applications"" by Guozhong Cao and Ying Wang.
+Academic Integrity:
+Emphasizes honesty and ethical behavior in line with NTU’s Honour Code, underpinning all academic work with truth, trust, and justice.
+Industry Participation:
+Involvement from healthcare industry experts and medical practitioners to share real-world insights on the application of nanostructured materials in healthcare.
+Planned Weekly Schedule:
+The course is structured to cover key concepts and self-assembly in the initial weeks, followed by a deep dive into specific nanostructures like micelles, bilayers, and liposomes, and concluding with their applications in cosmetics and healthcare, culminating in the continuous assessments.
+This course offers a comprehensive exploration of nanostructured materials in healthcare, blending theoretical knowledge with practical applications, and is designed to cater to students interested in the cutting-edge field of nanotechnology and biomaterials.
+",4.4,3.2,"nanostructured materials, healthcare applications, self-assembly, nanotherapeutics",interdisciplinary, healthcare applications, healthcare,0.999,0.9988,0.9987
+18,MS7480," Polymer Properties, Design and Sustainability","MS7480: Polymer Properties, Design and Sustainability, coordinated by Professor Hu Xiao, is a 1 AU course set for Semester 1, AY 2023-2024. It targets graduate students in Materials Science, Chemical Engineering, and Chemistry, specifically those enrolled in the School of Materials Science and Engineering's Doctor of Philosophy, Master of Engineering, and Master of Science programs. The course does not require MSE's approval for these students.
+Course Aims and Objectives:
+Introduce key industrially significant polymers like polyolefins, vinyl polymers, and polyamides, focusing on their properties, design, and sustainability.
+Equip students with the knowledge to design new polymer products, potentially replacing traditional materials like metals and ceramics, with a keen eye on sustainability.
+Course Syllabus:
+Fundamental introduction to polymer engineering, linking polymer structures to their physical properties for product design.
+In-depth exploration of polyester and polyamide products, including PET families, polycarbonates, liquid crystalline polymers, and aromatic polyamides, among others.
+Discussion on sustainability and end-of-life considerations for polymers.
+Assessment:
+Continuous Assessment 1 (CA1): 40% through quizzes or assignments covering all intended learning outcomes (ILOs).
+Continuous Assessment 2 (CA2): 60% via a final quiz or assignment, again covering all ILOs.
+Notably, there's no final exam; the course emphasizes descriptive, non-quantitative teaching supplemented by relevant videos on product manufacturing.
+Learning and Teaching Approach:
+Blended learning, heavily utilizing multimedia resources and online platforms for interactive learning and group work, facilitating independent learning and critical thinking.
+Readings and References:
+Recommended texts include works by Feldman and Barbalata, the Polymer Data Handbook, and Physical Properties of Polymers by James E. Mark and colleagues.
+Academic Integrity:
+Students are expected to adhere to NTU's Honour Code, emphasizing truth, trust, and justice.
+Industry Involvement:
+Collaboration with companies like PT Thias Sentosa and RGE for discussions on sustainable polymer design and recycling, including company visits and guest speakers.
+Planned Weekly Schedule:
+Detailed weekly breakdown covering topics from introductory overviews to specific polymer types like polyamides and polyimides, culminating in a final assessment.
+This course offers a comprehensive view of polymer properties, design principles, and sustainability considerations, preparing students for industrial challenges and innovations in polymer engineering.
+
+
+",4.0,3.2,"polymer engineering, product design, sustainability",industrial applications, interdisciplinary, polymers,0.995,0.994,0.994
