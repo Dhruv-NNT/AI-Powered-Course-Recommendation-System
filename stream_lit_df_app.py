@@ -54,6 +54,7 @@ st.subheader('Enter a keyword to search for relevant courses')
 
 # Get keyword from user input
 search_term = st.text_input('Keyword:')
+search_term = search_term.lower()
 
 # Perform search and display results
 if search_term:
