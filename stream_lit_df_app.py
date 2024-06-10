@@ -8,7 +8,7 @@ st.set_page_config(page_title="AIPCR: Keyword Search", layout="wide")
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("topic_modelling_output_bart_mnli.csv")
+    df = pd.read_csv("D:/MSAI Lectures and Documents/AIPCR Project/topic_modelling_output_bart_mnli.csv")
     unnamed_columns = [col for col in df.columns if col.startswith('Unnamed:')]
     return df.drop(columns=unnamed_columns, axis=1)
 
@@ -54,7 +54,7 @@ st.subheader('Enter a keyword to search for relevant courses')
 
 # Get keyword from user input
 search_term = st.text_input('Keyword:')
-search_term = search_term.lower()
+search_words = search_term.split()
 
 # Perform search and display results
 if search_term:
@@ -101,6 +101,26 @@ if search_term:
                 if score > 0.50:
                     # Append the row along with the score to the relevant courses list
                     relevant_courses.append((row, score))
+        
+        # Sort relevant courses by relevance score in descending order
+        relevant_courses.sort(key=lambda x: x[1], reverse=True)
+        
+        # Extract rows from the sorted relevant courses
+        sorted_relevant_courses = [row for row, _ in relevant_courses]
+            
+        # Convert list of relevant courses to DataFrame
+        relevant_courses_df = pd.DataFrame(sorted_relevant_courses)
+
+          # If no relevant courses found with the entire search term, split the term and search with individual words
+        if relevant_courses_df.empty:
+            for word in search_words:
+                for index, row in df.iterrows():
+                    keywords = row['keywords']
+                    if keywords and isinstance(keywords, str):
+                        similarity_score = classifier(sequences=[word], candidate_labels=[keywords])
+                        score = similarity_score[0]['scores'][0]
+                        if score > 0.50:
+                            relevant_courses.append((row, score))
         
         # Sort relevant courses by relevance score in descending order
         relevant_courses.sort(key=lambda x: x[1], reverse=True)
