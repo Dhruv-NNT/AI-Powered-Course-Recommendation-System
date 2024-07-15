@@ -95,14 +95,14 @@ The BART-large MNLI model was chosen for its superior performance in understandi
 
 - **Develop Recommendation Engine:** Build a recommendation engine on top of the clustered courses to suggest relevant courses to students.
 - **Enhance Dataset:** Collect more data to enrich the dataset and improve the model's performance.
-- **Real-Time Recommendations:** Optimize the system for real-time course recommendations.
+- **Batched Recommendations:** Optimize the system for batch predictions.
 
 ## 📧 Contact
 
 For any questions or feedback, feel free to reach out to:
 
 - **Name**: Aradhya Dhruv
-- **Email**: aradhya.dhruv@example.com
+- **Email**: aradhya.dhruv@gmail.com
 
 ## 📝 Acknowledgements
 
