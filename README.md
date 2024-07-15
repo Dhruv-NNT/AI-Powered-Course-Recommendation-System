@@ -79,28 +79,6 @@ The BART-large MNLI model was chosen for its superior performance in understandi
 2. **Model Training and Inference:** Utilized the BART-large MNLI model for training on the course data and performing inference to classify and tag the courses.
 3. **Evaluation:** Evaluated the model's performance and fine-tuned it for optimal results.
 
-Sure! Using the `$$` sign for block LaTeX formatting can help improve readability. Here’s the updated section:
-
-### Mathematical Formulation
-
-1. **Word Embeddings with GloVe**:
-
-   $$
-   \text{Embedding}(\text{word}) = \text{GloVe}(\text{word})
-   $$
-
-2. **Clustering with K-Means**:
-
-   $$
-   \text{Cluster}(X) = \text{KMeans}(X)
-   $$
-
-3. **Classification with BART-large MNLI**:
-
-   $$
-   \text{Classify}(X) = \text{BART-large MNLI}(X)
-   $$
-
 ## 🔍 Insights and Results
 
 ### Insights from Implementation
