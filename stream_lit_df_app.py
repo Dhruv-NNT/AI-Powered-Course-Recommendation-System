@@ -16,7 +16,8 @@ def load_data():
 def search_courses_by_keyword(keyword, df):
     keyword = keyword.lower()
     matching_rows = df[df['keywords'].str.contains(keyword, case=False, na=False)]
-    return matching_rows.sort_values(by='relevance', ascending=False)
+    sorted_rows = matching_rows.sort_values(by='relevance', ascending=False)
+    return sorted_rows.drop(columns=['relevance'], axis=1)
 
 # Load data
 df = load_data()
@@ -111,7 +112,7 @@ if search_term:
         # Convert list of relevant courses to DataFrame
         relevant_courses_df = pd.DataFrame(sorted_relevant_courses)
 
-          # If no relevant courses found with the entire search term, split the term and search with individual words
+        # If no relevant courses found with the entire search term, split the term and search with individual words
         if relevant_courses_df.empty:
             for word in search_words:
                 for index, row in df.iterrows():
@@ -131,9 +132,10 @@ if search_term:
         # Convert list of relevant courses to DataFrame
         relevant_courses_df = pd.DataFrame(sorted_relevant_courses)
 
+        # If 'relevance' column exists, drop it after sorting
         if 'relevance' in relevant_courses_df.columns:
-            # Sort DataFrame by 'relevance' column in descending order
             relevant_courses_df.sort_values(by='relevance', ascending=False, inplace=True)
+            relevant_courses_df.drop(columns=['relevance'], inplace=True)
             
         if not relevant_courses_df.empty:
             st.markdown(
