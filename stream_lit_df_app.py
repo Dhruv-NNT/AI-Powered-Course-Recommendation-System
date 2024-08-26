@@ -125,7 +125,7 @@ if search_term:
         ndcg_primary = ndcg_at_k(primary_relevances, len(primary_relevances))
         map_primary = mean_average_precision([primary_relevances])
         
-        # Print or log nDCG and MAP (these won't appear on the Streamlit app)
+        # Display nDCG and MAP in the Streamlit app
         st.write(f"Primary Search nDCG: {ndcg_primary:.4f}, MAP: {map_primary:.4f}")
         
         # Display the DataFrame with clickable links using st.markdown
@@ -173,7 +173,7 @@ if search_term:
             ndcg_fallback = ndcg_at_k(fallback_relevances, len(fallback_relevances))
             map_fallback = mean_average_precision([fallback_relevances])
             
-            # Print or log nDCG and MAP (these won't appear on the Streamlit app)
+            # Display nDCG and MAP in the Streamlit app
             st.write(f"Fallback Search nDCG: {ndcg_fallback:.4f}, MAP: {map_fallback:.4f}")
             
             # Apply clickable links to the course_url column
