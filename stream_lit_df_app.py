@@ -106,7 +106,7 @@ search_words = search_term.split()
 
 # Perform search and display results
 if search_term:
-    # st.write(f"Search term: {search_term}")  # Debugging print
+    st.write(f"Search term: {search_term}")  # Debugging print
     matching_courses = search_courses_by_keyword(search_term, df)
     if not matching_courses.empty:
         st.write("Top matching courses:")
@@ -174,7 +174,7 @@ if search_term:
             map_fallback = mean_average_precision([fallback_relevances])
             
             # Print or log nDCG and MAP (these won't appear on the Streamlit app)
-            # st.write(f"Fallback Search nDCG: {ndcg_fallback:.4f}, MAP: {map_fallback:.4f}")
+            st.write(f"Fallback Search nDCG: {ndcg_fallback:.4f}, MAP: {map_fallback:.4f}")
             
             # Apply clickable links to the course_url column
             relevant_courses_df = make_clickable_links(relevant_courses_df, 'course_url')
