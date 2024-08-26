@@ -9,7 +9,7 @@ st.set_page_config(page_title="AIPCR: Keyword Search", layout="wide")
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("D:/MSAI Lectures and Documents/AIPCR Project/topic_modelling_output_bart_mnli_v2.csv")
+    df = pd.read_csv("topic_modelling_output_bart_mnli_v2.csv")
     unnamed_columns = [col for col in df.columns if col.startswith('Unnamed:')]
     return df.drop(columns=unnamed_columns, axis=1)
 
