@@ -39,7 +39,7 @@ def reorder_columns(df):
 def dcg_at_k(relevances, k):
     relevances = np.asarray(relevances, dtype=np.float64)[:k]
     if relevances.size:
-        return relevances[0] + np.sum(relevances[1:] / np.log2(np.arange(2, relevances.size + 2)))
+        return relevances[0] + np.sum(relevances[1:] / np.log2(np.arange(2, relevances.size + 1)))
     return 0.0
 
 # Function to calculate nDCG
@@ -51,7 +51,7 @@ def ndcg_at_k(relevances, k):
 
 # Function to calculate Average Precision
 def average_precision(relevances, threshold=4.0):
-    relevances = np.asarray(relevances, dtype=np.float64) >= threshold
+    relevances = np.asarray(relevances) >= threshold
     out = [precision_at_k(relevances, k + 1) for k in range(relevances.size) if relevances[k]]
     if not out:
         return 0.0
@@ -59,7 +59,7 @@ def average_precision(relevances, threshold=4.0):
 
 # Function to calculate Precision at K
 def precision_at_k(relevances, k):
-    relevances = np.asarray(relevances, dtype=np.float64)[:k]
+    relevances = np.asarray(relevances)[:k]
     return np.mean(relevances)
 
 # Function to calculate MAP
@@ -101,12 +101,11 @@ st.title('Find Relevant Courses')
 st.subheader('Enter a keyword to search for relevant courses')
 
 # Get keyword from user input
-search_term = st.text_input('Keyword:')
+search_term = st.text_input('Enter a keyword:')
 search_words = search_term.split()
 
 # Perform search and display results
 if search_term:
-    st.write(f"Search term: {search_term}")  # Debugging print
     matching_courses = search_courses_by_keyword(search_term, df)
     if not matching_courses.empty:
         st.write("Top matching courses:")
@@ -167,7 +166,6 @@ if search_term:
         relevant_courses_df = pd.DataFrame(sorted_relevant_courses)
 
         if not relevant_courses_df.empty:
-            st.write("Fallback search found results.")
             # Calculate nDCG and MAP for fallback search
             fallback_relevances = relevant_courses_df['relevance'].tolist()
             ndcg_fallback = ndcg_at_k(fallback_relevances, len(fallback_relevances))
