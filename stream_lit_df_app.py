@@ -125,7 +125,7 @@ if search_term:
         map_primary = mean_average_precision([primary_relevances])
         
         # Display nDCG and MAP in the Streamlit app
-        st.write(f"Primary Search nDCG: {ndcg_primary:.4f}, MAP: {map_primary:.4f}")
+        # st.write(f"Primary Search nDCG: {ndcg_primary:.4f}, MAP: {map_primary:.4f}")
         
         # Display the DataFrame with clickable links using st.markdown
         st.markdown(
@@ -172,7 +172,7 @@ if search_term:
             map_fallback = mean_average_precision([fallback_relevances])
             
             # Display nDCG and MAP in the Streamlit app
-            st.write(f"Fallback Search nDCG: {ndcg_fallback:.4f}, MAP: {map_fallback:.4f}")
+            # st.write(f"Fallback Search nDCG: {ndcg_fallback:.4f}, MAP: {map_fallback:.4f}")
             
             # Apply clickable links to the course_url column
             relevant_courses_df = make_clickable_links(relevant_courses_df, 'course_url')
