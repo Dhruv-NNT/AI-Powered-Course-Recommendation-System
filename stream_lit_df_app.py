@@ -174,7 +174,7 @@ if search_term:
             map_fallback = mean_average_precision([fallback_relevances])
             
             # Print or log nDCG and MAP (these won't appear on the Streamlit app)
-            st.write(f"Fallback Search nDCG: {ndcg_fallback:.4f}, MAP: {map_fallback:.4f}")
+            # st.write(f"Fallback Search nDCG: {ndcg_fallback:.4f}, MAP: {map_fallback:.4f}")
             
             # Apply clickable links to the course_url column
             relevant_courses_df = make_clickable_links(relevant_courses_df, 'course_url')
