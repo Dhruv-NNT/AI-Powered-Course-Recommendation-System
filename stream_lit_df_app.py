@@ -37,9 +37,9 @@ def reorder_columns(df):
 
 # Function to calculate DCG
 def dcg_at_k(relevances, k):
-    relevances = np.asfarray(relevances)[:k]
+    relevances = np.asarray(relevances, dtype=np.float64)[:k]
     if relevances.size:
-        return relevances[0] + np.sum(relevances[1:] / np.log2(np.arange(2, relevances.size + 1)))
+        return relevances[0] + np.sum(relevances[1:] / np.log2(np.arange(2, relevances.size + 2)))
     return 0.0
 
 # Function to calculate nDCG
@@ -51,7 +51,7 @@ def ndcg_at_k(relevances, k):
 
 # Function to calculate Average Precision
 def average_precision(relevances, threshold=4.0):
-    relevances = np.asarray(relevances) >= threshold
+    relevances = np.asarray(relevances, dtype=np.float64) >= threshold
     out = [precision_at_k(relevances, k + 1) for k in range(relevances.size) if relevances[k]]
     if not out:
         return 0.0
@@ -59,7 +59,7 @@ def average_precision(relevances, threshold=4.0):
 
 # Function to calculate Precision at K
 def precision_at_k(relevances, k):
-    relevances = np.asarray(relevances)[:k]
+    relevances = np.asarray(relevances, dtype=np.float64)[:k]
     return np.mean(relevances)
 
 # Function to calculate MAP
@@ -101,15 +101,14 @@ st.title('Find Relevant Courses')
 st.subheader('Enter a keyword to search for relevant courses')
 
 # Get keyword from user input
-search_term = st.text_input('')
+search_term = st.text_input('Keyword:')
 search_words = search_term.split()
 
 # Perform search and display results
 if search_term:
-    print(f"Search term: {search_term}")  # Debugging print
+    st.write(f"Search term: {search_term}")  # Debugging print
     matching_courses = search_courses_by_keyword(search_term, df)
     if not matching_courses.empty:
-        print("Primary search found results.")  # Debugging print
         st.write("Top matching courses:")
         
         # Apply clickable links to the course_url column
@@ -127,7 +126,7 @@ if search_term:
         map_primary = mean_average_precision([primary_relevances])
         
         # Print or log nDCG and MAP (these won't appear on the Streamlit app)
-        print(f"Primary Search nDCG: {ndcg_primary}, MAP: {map_primary}")
+        st.write(f"Primary Search nDCG: {ndcg_primary:.4f}, MAP: {map_primary:.4f}")
         
         # Display the DataFrame with clickable links using st.markdown
         st.markdown(
@@ -135,7 +134,6 @@ if search_term:
             unsafe_allow_html=True
         )
     else:
-        print("Primary search found no results, triggering fallback search.")  # Debugging print
         st.write("No direct keyword matches, attempting fallback search.")
         
         classifier = load_classifier()
@@ -169,14 +167,14 @@ if search_term:
         relevant_courses_df = pd.DataFrame(sorted_relevant_courses)
 
         if not relevant_courses_df.empty:
-            print("Fallback search found results.")  # Debugging print
+            st.write("Fallback search found results.")
             # Calculate nDCG and MAP for fallback search
             fallback_relevances = relevant_courses_df['relevance'].tolist()
             ndcg_fallback = ndcg_at_k(fallback_relevances, len(fallback_relevances))
             map_fallback = mean_average_precision([fallback_relevances])
             
             # Print or log nDCG and MAP (these won't appear on the Streamlit app)
-            print(f"Fallback Search nDCG: {ndcg_fallback}, MAP: {map_fallback}")
+            st.write(f"Fallback Search nDCG: {ndcg_fallback:.4f}, MAP: {map_fallback:.4f}")
             
             # Apply clickable links to the course_url column
             relevant_courses_df = make_clickable_links(relevant_courses_df, 'course_url')
