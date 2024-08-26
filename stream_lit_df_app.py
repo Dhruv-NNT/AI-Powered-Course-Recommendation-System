@@ -126,7 +126,7 @@ if search_term:
         map_primary = mean_average_precision([primary_relevances])
         
         # Print or log nDCG and MAP (these won't appear on the Streamlit app)
-        st.write(f"Primary Search nDCG: {ndcg_primary:.4f}, MAP: {map_primary:.4f}")
+        # st.write(f"Primary Search nDCG: {ndcg_primary:.4f}, MAP: {map_primary:.4f}")
         
         # Display the DataFrame with clickable links using st.markdown
         st.markdown(
