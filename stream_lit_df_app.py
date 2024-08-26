@@ -106,7 +106,7 @@ search_words = search_term.split()
 
 # Perform search and display results
 if search_term:
-    st.write(f"Search term: {search_term}")  # Debugging print
+    # st.write(f"Search term: {search_term}")  # Debugging print
     matching_courses = search_courses_by_keyword(search_term, df)
     if not matching_courses.empty:
         st.write("Top matching courses:")
