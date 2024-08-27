@@ -6,12 +6,26 @@ import numpy as np
 # Set page layout to wide and browser tab name
 st.set_page_config(page_title="AIPCR: Keyword Search", layout="wide")
 
-# Load data
+# Load data with specified encoding
 @st.cache_data
 def load_data():
-    df = pd.read_csv("topic_modelling_output_bart_mnli_v2.csv")
+    df = pd.read_csv("D:/MSAI Lectures and Documents/AIPCR Project/topic_modelling_output_bart_mnli_v3.csv", encoding='ISO-8859-1')
     unnamed_columns = [col for col in df.columns if col.startswith('Unnamed:')]
     return df.drop(columns=unnamed_columns, axis=1)
+
+# Function to format course summary text for HTML display
+def format_text(text):
+    # Replace the non-standard bullet with a standard HTML bullet
+    text = text.replace('', '•')
+    
+    # Split the text into lines, strip each line of extra spaces, and remove empty lines
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    
+    # Join the cleaned lines with a single line break for HTML display
+    cleaned_text = '<br>'.join(lines)
+    
+    # Return text wrapped in a paragraph tag
+    return f"<p>{cleaned_text}</p>"
 
 # Function to create clickable links in the course_url column
 def make_clickable_links(df, url_column):
@@ -32,39 +46,8 @@ def search_courses_by_keyword(keyword, df):
 
 # Function to reorder and select specific columns
 def reorder_columns(df):
-    columns_order = ['course', 'course_name', 'course_summary', 'course_url', 'relevance', 'search_relevance']
+    columns_order = ['search_relevance', 'course', 'course_name', 'course_summary', 'course_url']
     return df[columns_order]
-
-# Function to calculate DCG
-def dcg_at_k(relevances, k):
-    relevances = np.asarray(relevances, dtype=np.float64)[:k]
-    if relevances.size:
-        return relevances[0] + np.sum(relevances[1:] / np.log2(np.arange(2, relevances.size + 1)))
-    return 0.0
-
-# Function to calculate nDCG
-def ndcg_at_k(relevances, k):
-    dcg_max = dcg_at_k(sorted(relevances, reverse=True), k)
-    if not dcg_max:
-        return 0.0
-    return dcg_at_k(relevances, k) / dcg_max
-
-# Function to calculate Average Precision
-def average_precision(relevances, threshold=4.0):
-    relevances = np.asarray(relevances) >= threshold
-    out = [precision_at_k(relevances, k + 1) for k in range(relevances.size) if relevances[k]]
-    if not out:
-        return 0.0
-    return np.mean(out)
-
-# Function to calculate Precision at K
-def precision_at_k(relevances, k):
-    relevances = np.asarray(relevances)[:k]
-    return np.mean(relevances)
-
-# Function to calculate MAP
-def mean_average_precision(relevances_list, threshold=4.0):
-    return np.mean([average_precision(relevances, threshold) for relevances in relevances_list])
 
 # Load data
 df = load_data()
@@ -85,6 +68,20 @@ st.markdown(
         text-align: center;
         font-size: 24px;
         font-weight: bold;
+    }
+    
+    /* Thicker borders for DataFrame */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 10px solid black; /* Thicker border */
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
     }
     </style>
     <div class="ribbon">
@@ -110,6 +107,9 @@ if search_term:
     if not matching_courses.empty:
         st.write("Top matching courses:")
         
+        # Format the course summary text
+        matching_courses['course_summary'] = matching_courses['course_summary'].apply(format_text)
+        
         # Apply clickable links to the course_url column
         matching_courses = make_clickable_links(matching_courses, 'course_url')
         
@@ -119,13 +119,8 @@ if search_term:
         # Reorder columns and select specific columns to display
         matching_courses = reorder_columns(matching_courses)
         
-        # Calculate nDCG and MAP for primary search
-        primary_relevances = matching_courses['relevance'].tolist()
-        ndcg_primary = ndcg_at_k(primary_relevances, len(primary_relevances))
-        map_primary = mean_average_precision([primary_relevances])
-        
-        # Display nDCG and MAP in the Streamlit app
-        # st.write(f"Primary Search nDCG: {ndcg_primary:.4f}, MAP: {map_primary:.4f}")
+        # Rename columns to remove underscores and capitalize words
+        matching_courses.columns = [col.replace('_', ' ').title() for col in matching_courses.columns]
         
         # Display the DataFrame with clickable links using st.markdown
         st.markdown(
@@ -166,13 +161,8 @@ if search_term:
         relevant_courses_df = pd.DataFrame(sorted_relevant_courses)
 
         if not relevant_courses_df.empty:
-            # Calculate nDCG and MAP for fallback search
-            fallback_relevances = relevant_courses_df['relevance'].tolist()
-            ndcg_fallback = ndcg_at_k(fallback_relevances, len(fallback_relevances))
-            map_fallback = mean_average_precision([fallback_relevances])
-            
-            # Display nDCG and MAP in the Streamlit app
-            # st.write(f"Fallback Search nDCG: {ndcg_fallback:.4f}, MAP: {map_fallback:.4f}")
+            # Format the course summary text
+            relevant_courses_df['course_summary'] = relevant_courses_df['course_summary'].apply(format_text)
             
             # Apply clickable links to the course_url column
             relevant_courses_df = make_clickable_links(relevant_courses_df, 'course_url')
@@ -182,6 +172,9 @@ if search_term:
             
             # Reorder columns and select specific columns to display
             relevant_courses_df = reorder_columns(relevant_courses_df)
+            
+            # Rename columns to remove underscores and capitalize words
+            relevant_courses_df.columns = [col.replace('_', ' ').title() for col in relevant_courses_df.columns]
             
             # Display the DataFrame with clickable links using st.markdown
             st.markdown(
