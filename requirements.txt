@@ -3,5 +3,5 @@ pandas
 numpy
 torch
 transformers
-
-
+pinecone-client
+faiss-cpu
