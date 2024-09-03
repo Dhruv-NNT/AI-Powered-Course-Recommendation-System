@@ -24,7 +24,7 @@ def get_embedding(text):
 # Load data with specified encoding
 @st.cache_data
 def load_data():
-    df = pd.read_csv("D:/MSAI Lectures and Documents/AIPCR Project/topic_modelling_output_bart_mnli_v3.csv", encoding='ISO-8859-1')
+    df = pd.read_csv("topic_modelling_output_bart_mnli_v3.csv", encoding='ISO-8859-1')
     unnamed_columns = [col for col in df.columns if col.startswith('Unnamed:')]
     df = df.drop(columns=unnamed_columns, axis=1)
     return df
