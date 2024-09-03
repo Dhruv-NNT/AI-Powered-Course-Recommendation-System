@@ -50,7 +50,7 @@ def search_courses_by_faiss(query, index, df):
     matching_rows = matching_rows[matching_rows['faiss_score'] >= threshold]
 
     # Sort by faiss_score (cosine similarity)
-    matching_rows = matching_rows.sort_values(by=['relevance','faiss_score'], ascending=False)
+    matching_rows = matching_rows.sort_values(by=['faiss_score', 'relevance'], ascending=False)
     
     return matching_rows
 
