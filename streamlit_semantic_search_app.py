@@ -46,7 +46,7 @@ def search_courses_by_faiss(query, index, df):
     matching_rows['faiss_score'] = distances.flatten()  # Distances are now effectively cosine similarities
     
     # Apply the threshold: keep only rows with faiss_score above a certain threshold
-    threshold = 0.2
+    threshold = 0.4
     matching_rows = matching_rows[matching_rows['faiss_score'] >= threshold]
 
     # Sort by faiss_score (cosine similarity)
