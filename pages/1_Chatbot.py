@@ -10,8 +10,11 @@ import warnings
 warnings.filterwarnings('ignore', category=FutureWarning, module='transformers.tokenization_utils_base')
 
 # LangChain imports
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
+# from langchain_huggingface import HuggingFaceEmbeddings
+# from langchain_community.vectorstores import FAISS
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.vectorstores import FAISS
+
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_groq import ChatGroq
 from langchain.memory import ConversationBufferMemory
