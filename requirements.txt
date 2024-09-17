@@ -6,4 +6,5 @@ transformers
 faiss-cpu
 langchain-community
 langchain>=0.0.200
+langchain-groq
 sentence-transformers
