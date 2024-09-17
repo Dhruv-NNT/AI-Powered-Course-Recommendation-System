@@ -5,3 +5,6 @@ torch
 transformers
 pinecone-client
 faiss-cpu
+langchain
+sentence-transformers
+tavily
