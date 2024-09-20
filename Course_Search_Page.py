@@ -4,9 +4,15 @@ import numpy as np
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 import math
+import time  # To simulate delay for testing
 
 # Set page layout to wide and browser tab name
 st.set_page_config(page_title="AIPCR: Keyword Search", layout="wide")
+
+# Function to clear the cache upon user exit
+def clear_cache():
+    st.cache_data.clear()
+    st.session_state.clear()
 
 # Load data with specified encoding
 @st.cache_data
@@ -24,17 +30,23 @@ def generate_vectorstore(df):
     # Combine course_name and course_summary
     texts = (df['course_name'] + ' ' + df['course_summary']).tolist()
     
+    # Show the loading message while embedding model is being loaded
+    loading_message = st.empty()
+    loading_message.info("Please wait, loading the embedding model...")
+
     # Initialize progress bar and status text
     my_bar = st.progress(0)
     status_text = st.empty()
     
-    # Inform the user that the embedding model is being loaded
-    status_text.text('Loading embedding model...')
-    
     # Initialize the embedding model
+    start_time = time.time()  # Start timer to track loading duration
     embeddings_model = HuggingFaceEmbeddings(model_name='sentence-transformers/all-mpnet-base-v2')
+    loading_duration = time.time() - start_time  # Measure loading time
     
-    # Update status text
+    # Remove the loading message once the model is loaded
+    loading_message.empty()
+    
+    # Update status text for embedding generation
     status_text.text('Generating embeddings...')
     
     # Initialize variables
@@ -43,12 +55,17 @@ def generate_vectorstore(df):
     total_texts = len(texts)
     total_batches = math.ceil(total_texts / batch_size)
     
+    # Update progress for model loading (before embedding generation starts)
+    my_bar.progress(0.1)  # Progress bar update for loading
+
     for idx, start_idx in enumerate(range(0, total_texts, batch_size)):
         batch_texts = texts[start_idx:start_idx+batch_size]
         batch_embeddings = embeddings_model.embed_documents(batch_texts)
         text_embeddings.extend(zip(batch_texts, batch_embeddings))  # Store tuples of (text, embedding)
-        # Update progress bar
-        my_bar.progress((idx + 1) / total_batches)
+
+        # Update progress bar dynamically for embedding generation
+        progress = (idx + 1) / total_batches
+        my_bar.progress(0.1 + 0.9 * progress)  # 90% of the progress is for embedding generation
     
     # After embeddings are generated, create vectorstore
     vectorstore = FAISS.from_embeddings(text_embeddings, embeddings_model)
@@ -104,7 +121,7 @@ def reorder_columns(df):
     columns_order = ['course_name', 'course_summary', 'course_url']
     return df[columns_order]
 
-# Add maroon ribbon
+# Add ribbon for branding or highlighting purposes
 with st.container():
     st.markdown(
         """
@@ -116,7 +133,7 @@ with st.container():
             font-size: 24px;
             font-weight: bold;
             display: flex;
-            justify-content: center; /* Center the title */
+            justify-content: center;
             align-items: center;
         }
         .ribbon .title {
@@ -127,7 +144,6 @@ with st.container():
         unsafe_allow_html=True
     )
 
-    # Create the ribbon layout
     st.markdown(
         '''
         <div class="ribbon">
@@ -153,7 +169,6 @@ else:
 # Add title
 st.title('Find Relevant Courses')
 
-# Starter courses list
 starter_courses = [
     "MS7320",
     "MS7310",
@@ -219,7 +234,6 @@ if search_term:
         )
 else:
     st.write("For those new to materials science, here are some starter courses to begin your journey:")
-
     # Get and display starter courses
     starter_df = get_starter_courses(df)
     starter_df['course_summary'] = starter_df['course_summary'].apply(format_text)
@@ -231,3 +245,9 @@ else:
         starter_df.to_html(escape=False, index=False),
         unsafe_allow_html=True
     )
+
+# Button to clear cache manually
+if st.button("Clear Cache"):
+    clear_cache()
+    st.success("Cache cleared successfully!")
+
