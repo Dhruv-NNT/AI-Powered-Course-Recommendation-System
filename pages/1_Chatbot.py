@@ -136,7 +136,7 @@ def create_augmentation_agent():
     def augment_response(query):
         search_results = web_search_tool(query)
         augmented_response = st.session_state['llm'].predict(
-            f"Based on the following search results, provide additional learning resources which the user can go through. "
+            f"Based on the following search results, provide additional verified and trusted learning resources available on the internet which the user can go through. "
             f"Begin your answer by saying 'Additionally, here are a few external learning resources you can explore:'\n\n{search_results}")
         return augmented_response
 
