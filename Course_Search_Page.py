@@ -1,4 +1,4 @@
-import streamlit as st
++import streamlit as st
 import pandas as pd
 import numpy as np
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -89,6 +89,7 @@ def search_courses_by_faiss(query, vectorstore, df, threshold=0.5):
             matching_row = df[df['course_name'] + ' ' + df['course_summary'] == doc.page_content]
             if not matching_row.empty:
                 filtered_results.append({
+                    'course': matching_row['course'].values[0],
                     'course_name': matching_row['course_name'].values[0],
                     'course_summary': matching_row['course_summary'].values[0],
                     'course_url': matching_row['course_url'].values[0] if 'course_url' in matching_row.columns else 'N/A',
@@ -111,14 +112,20 @@ def format_text(text):
     # Return text wrapped in a paragraph tag
     return f"<p>{cleaned_text}</p>"
 
-# Function to create clickable links in the course_url column
-def make_clickable_links(df, url_column):
-    df['course_url'] = df[url_column].apply(lambda x: f'<a href="{x}" target="_blank">{x}</a>')
+# Function to create clickable links in the course_url column using course code as link text
+def make_clickable_links(df, url_column, link_text_column):
+    # Update: Creating clickable links using course code instead of displaying entire URL
+    df['course_url'] = df.apply(lambda x: f'<a href="{x[url_column]}" target="_blank">{x[link_text_column]}</a>', axis=1)
+    return df
+
+# Function to add a rank column
+def add_rank_column(df):
+    df.insert(0, 'Rank', range(1, len(df) + 1))
     return df
 
 # Function to reorder and select specific columns
 def reorder_columns(df):
-    columns_order = ['course_name', 'course_summary', 'course_url']
+    columns_order = ['Rank', 'course', 'course_name', 'course_summary', 'course_url']
     return df[columns_order]
 
 # Add ribbon for branding or highlighting purposes
@@ -204,8 +211,11 @@ if search_term:
         # Format the course summary text
         matching_courses['course_summary'] = matching_courses['course_summary'].apply(format_text)
 
-        # Apply clickable links to the course_url column
-        matching_courses = make_clickable_links(matching_courses, 'course_url')
+        # Apply clickable links to the course_url column using course code as link text
+        matching_courses = make_clickable_links(matching_courses, 'course_url', 'course')
+
+        # Add rank column
+        matching_courses = add_rank_column(matching_courses)
 
         # Reorder columns and select specific columns to display
         matching_courses = reorder_columns(matching_courses)
@@ -213,9 +223,21 @@ if search_term:
         # Rename columns to remove underscores and capitalize words
         matching_courses.columns = [col.replace('_', ' ').title() for col in matching_courses.columns]
 
-        # Display the DataFrame with clickable links using st.markdown
+        # Display the DataFrame with clickable links using st.markdown with centered header alignment
         st.markdown(
             matching_courses.to_html(escape=False, index=False),
+            unsafe_allow_html=True
+        )
+
+        # Add CSS to center align all the table headers
+        st.markdown(
+            """
+            <style>
+            th {
+                text-align: center !important;
+            }
+            </style>
+            """,
             unsafe_allow_html=True
         )
     else:
@@ -224,7 +246,11 @@ if search_term:
         # Get and display starter courses
         starter_df = get_starter_courses(df)
         starter_df['course_summary'] = starter_df['course_summary'].apply(format_text)
-        starter_df = make_clickable_links(starter_df, 'course_url')
+        starter_df = make_clickable_links(starter_df, 'course_url', 'course')
+
+        # Add rank column
+        starter_df = add_rank_column(starter_df)
+
         starter_df = reorder_columns(starter_df)
         starter_df.columns = [col.replace('_', ' ').title() for col in starter_df.columns]
 
@@ -232,12 +258,28 @@ if search_term:
             starter_df.to_html(escape=False, index=False),
             unsafe_allow_html=True
         )
+
+        # Add CSS to center align all the table headers
+        st.markdown(
+            """
+            <style>
+            th {
+                text-align: center !important;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
 else:
     st.write("For those new to materials science, here are some starter courses to begin your journey:")
     # Get and display starter courses
     starter_df = get_starter_courses(df)
     starter_df['course_summary'] = starter_df['course_summary'].apply(format_text)
-    starter_df = make_clickable_links(starter_df, 'course_url')
+    starter_df = make_clickable_links(starter_df, 'course_url', 'course')
+
+    # Add rank column
+    starter_df = add_rank_column(starter_df)
+
     starter_df = reorder_columns(starter_df)
     starter_df.columns = [col.replace('_', ' ').title() for col in starter_df.columns]
 
@@ -246,8 +288,19 @@ else:
         unsafe_allow_html=True
     )
 
+    # Add CSS to center align all the table headers
+    st.markdown(
+        """
+        <style>
+        th {
+            text-align: center !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
 # Button to clear cache manually
 if st.button("Clear Cache"):
     clear_cache()
     st.success("Cache cleared successfully!")
-
