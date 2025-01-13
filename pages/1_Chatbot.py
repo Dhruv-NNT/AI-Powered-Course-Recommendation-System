@@ -24,7 +24,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 tavily_api_key = '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'
-groq_api_key = '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'
+groq_api_key = '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'
 
 if tavily_api_key is None or groq_api_key is None:
     raise ValueError("API keys for Tavily and/or Groq are not set in the environment variables.")
